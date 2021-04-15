@@ -60,7 +60,7 @@ void panic(char *);
 struct cmd *parsecmd(char *);
 
 // Execute cmd.  Never returns.
-void runcmd(struct cmd *cmd) 
+void runcmd(struct cmd *cmd)
 {
   int p[2];
   struct backcmd *bcmd;
@@ -201,7 +201,7 @@ int fork1(void)
 //PAGEBREAK!
 // Constructors
 
-struct cmd * execcmd(void)
+struct cmd *execcmd(void)
 {
   struct execcmd *cmd;
 
@@ -211,7 +211,7 @@ struct cmd * execcmd(void)
   return (struct cmd *)cmd;
 }
 
-struct cmd * redircmd(struct cmd *subcmd, char *file, char *efile, int mode, int fd)
+struct cmd *redircmd(struct cmd *subcmd, char *file, char *efile, int mode, int fd)
 {
   struct redircmd *cmd;
 
