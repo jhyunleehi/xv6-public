@@ -127,7 +127,7 @@ void runcmd(struct cmd *cmd)
     close(p[0]);
     close(p[1]);
     wait();
-    wait();
+    wait();`
     break;
 
   case BACK:
@@ -459,8 +459,7 @@ parseexec(char **ps, char *es)
 }
 
 // NUL-terminate all the counted strings.
-struct cmd *
-nulterminate(struct cmd *cmd)
+struct cmd *nulterminate(struct cmd *cmd)
 {
   int i;
   struct backcmd *bcmd;
