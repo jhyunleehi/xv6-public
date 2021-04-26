@@ -102,7 +102,7 @@ void bootmain(void)
 
 * kernel의 entry는 `_start`이고  이것은 kernel 파일 생성할 때 그 위치를 ld 스크립트에 정의 했다.
 
-* kernel 파일의 _start 위치는 0x0010000c로 설정된다. 1MB+12bytes
+* kernel 파일의 _start 위치는 `0x0010000c`로 설정된다. 1MB+12bytes
 
 * ```c
   OUTPUT_FORMAT("elf32-i386", "elf32-i386", "elf32-i386")
@@ -129,5 +129,16 @@ $ nm kernel | grep _start
 0010000c T _start
 ```
 
+* kernel 이미지의 start 위치는
 
+* ```bash
+  $ objdump  -f kernel
+  
+  kernel:     file format elf32-i386
+  architecture: i386, flags 0x00000112:
+  EXEC_P, HAS_SYMS, D_PAGED
+  start address 0x0010000c
+  ```
+
+* 
 
