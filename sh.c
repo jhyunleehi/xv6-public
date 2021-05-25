@@ -127,7 +127,7 @@ void runcmd(struct cmd *cmd)
     close(p[0]);
     close(p[1]);
     wait();
-    wait();
+    wait();`
     break;
 
   case BACK:
