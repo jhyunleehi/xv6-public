@@ -1,5 +1,5 @@
-#include "kernel/types.h"
-#include "user/user.h"
+#include "types.h"
+#include "user.h"
 
 int
 main(int argc, char *argv[])
@@ -14,5 +14,5 @@ main(int argc, char *argv[])
       write(1, "\n", 1);
     }
   }
-  exit(0);
+  exit();
 }

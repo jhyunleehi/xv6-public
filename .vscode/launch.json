@@ -25,7 +25,7 @@
             "request": "attach",
             "name": "Attach to gdbserver",
             "executable": "./kernel",
-            "target": ":26000",
+            "target": ":26001",
             "remote": true,
             "cwd": "${workspaceRoot}",
             "valuesFormatting": "parseText"
